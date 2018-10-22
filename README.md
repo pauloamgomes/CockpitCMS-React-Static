@@ -2,6 +2,8 @@
 
 This "Demo" website project combines Cockpit CMS for managing the contents and React Static for presenting them in an optimal way.
 
+Demo page: https://pauloamgomes.github.io/CockpitCMS-React-Static/
+
 # Requirements
 
 For running this example website you'll need:
