@@ -47,19 +47,20 @@ echo "Downloading UniqueSlugs addon from https://github.com/raffaelj/cockpit_Uni
 wget -qO- -O UniqueSlugs.zip https://github.com/raffaelj/cockpit_UniqueSlugs/archive/master.zip \
   && unzip -q UniqueSlugs.zip -d $DOCROOT/addons \
   && rm UniqueSlugs.zip \
-  && mv $DOCROOT/addons/cockpit_UniqueSlugs-master $DOCROOT/addons/UniqueSlugs
+  && mv $DOCROOT/addons/cockpit_UniqueSlugs-master/UniqueSlugs $DOCROOT/addons/UniqueSlugs \
+  && rm -rf $DOCROOT/addons/cockpit_UniqueSlugs-master
 
 # install example sqlite data
 echo
 echo "Installing example data..."
-cp -r example/storage/* $DOCROOT/storage
-chmod -R 0777 $DOCROOT/storage
+unzip -q example/storage.zip -d $DOCROOT \
+  && chmod -R 0777 $DOCROOT/storage
 
 # restore config
 echo "Creating Cockpit configuration file..."
-cp -r example/config $DOCROOT/
-chmod 0775 $DOCROOT/config
-chmod 0666 $DOCROOT/config/config.yaml
+cp -r example/config $DOCROOT/ \
+  && chmod 0775 $DOCROOT/config \
+  && chmod 0666 $DOCROOT/config/config.yaml
 
 cd docker
 echo "Starting docker-compose for the first time..."

@@ -7,3 +7,5 @@ RUN apk --no-cache add shadow && \
   usermod -a -G wodby www-data && \
   chmod 0775 /var/www/html && \
   chown wodby:www-data /var/www/html
+
+WORKDIR /var/www/html
