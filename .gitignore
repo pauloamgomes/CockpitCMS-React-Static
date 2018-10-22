@@ -1,0 +1,11 @@
+.DS_Store
+cockpit/www
+cockpit/docker/.docker-sync
+react-app/public/storage/*.php
+react-app/public/storage/cache
+react-app/public/storage/collections
+react-app/public/storage/data
+react-app/public/storage/forms
+react-app/public/storage/imagestyles
+react-app/public/storage/singleton
+react-app/public/storage/tmp

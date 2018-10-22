@@ -1,0 +1,36 @@
+{
+  "name": "react-static-cockpit-example",
+  "version": "1.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "react-static start",
+    "stage": "react-static build --staging",
+    "build": "react-static build",
+    "bundle": "react-static bundle",
+    "export": "react-static export",
+    "serve": "serve dist -p 3000"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^4.1.3",
+    "formik": "^1.3.1",
+    "graphql-request": "^1.8.2",
+    "htmr": "^0.7.0",
+    "leaflet": "^1.3.4",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-highlight.js": "^1.0.7",
+    "react-hot-loader": "^4.0.0-beta.21",
+    "react-leaflet": "^2.1.0",
+    "react-player": "^1.6.6",
+    "react-router": "^4.2.0",
+    "react-static": "^5.9.12",
+    "reactstrap": "^6.5.0",
+    "styled-components": "^3.4.10"
+  },
+  "devDependencies": {
+    "eslint-config-react-tools": "1.x.x",
+    "serve": "^6.1.0"
+  }
+}

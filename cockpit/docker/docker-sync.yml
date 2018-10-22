@@ -1,0 +1,7 @@
+version: "2"
+
+syncs:
+  cockpit-react-static-sync:
+    src: '../www'
+    sync_userid: '501' # Change to 1000 on Linux
+    sync_excludes: ['.gitignore', '.git/', '.idea/', '.DS_Store', 'node_modules']
