@@ -7,6 +7,6 @@ import CockpitComponents from "../components/CockpitComponents";
 export default withRouteData(({ page }) => (
   <article>
     <Metatags title={page.title} pageDescription={page.description} />
-    <CockpitComponents components={page.components} />
+    <CockpitComponents components={page.components || []} />
   </article>
 ));

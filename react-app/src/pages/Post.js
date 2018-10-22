@@ -12,8 +12,11 @@ export default withRouteData(({ post }) => (
       title={post.title}
       summary={post.summary}
       image={post.image}
-      categories={post.categories.map(category => category.name)}
+      categories={
+        (post.categories && post.categories.map(category => category.name)) ||
+        []
+      }
     />
-    <CockpitComponents components={post.components} />
+    <CockpitComponents components={post.components || []} />
   </article>
 ));

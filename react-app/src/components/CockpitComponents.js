@@ -37,25 +37,26 @@ const defaultComponents = {
 
 export default ({ components }) => (
   <div className="page--components">
-    {components.map((component_parsed, idx) => {
-      const name = component_parsed.component.toLowerCase();
-      const settings = component_parsed.settings;
-      const columns = component_parsed.columns || [];
+    {components &&
+      components.map((component_parsed, idx) => {
+        const name = component_parsed.component.toLowerCase();
+        const settings = component_parsed.settings;
+        const columns = component_parsed.columns || [];
 
-      if (defaultComponents[name] === undefined) {
-        return null;
-      }
+        if (defaultComponents[name] === undefined) {
+          return null;
+        }
 
-      const Component = defaultComponents[name];
+        const Component = defaultComponents[name];
 
-      return (
-        <Component
-          name={name}
-          {...settings}
-          columns={columns}
-          key={`component-${idx}`}
-        />
-      );
-    })}
+        return (
+          <Component
+            name={name}
+            {...settings}
+            columns={columns}
+            key={`component-${idx}`}
+          />
+        );
+      })}
   </div>
 );
