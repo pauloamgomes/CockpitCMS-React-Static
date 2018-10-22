@@ -53,7 +53,7 @@ wget -qO- -O UniqueSlugs.zip https://github.com/raffaelj/cockpit_UniqueSlugs/arc
 # install example sqlite data
 echo
 echo "Installing example data..."
-unzip -q example/storage.zip -d $DOCROOT \
+unzip -o -q example/storage.zip -d $DOCROOT \
   && chmod -R 0777 $DOCROOT/storage
 
 # restore config
