@@ -36,11 +36,11 @@ wget -qO- -O LayoutComponents.zip https://github.com/agentejo/LayoutComponents/a
   && mv $DOCROOT/addons/LayoutComponents-master $DOCROOT/addons/LayoutComponents
 
 # CustomComponents addon
-echo "Downloading LayoutComponents addon from https://github.com/pauloamgomes/Cockpit-CustomComponents/archive/master.zip"
+echo "Downloading CustomComponents addon from https://github.com/pauloamgomes/Cockpit-CustomComponents/archive/master.zip"
 wget -qO- -O CustomComponents.zip https://github.com/pauloamgomes/Cockpit-CustomComponents/archive/master.zip \
   && unzip -q CustomComponents.zip -d $DOCROOT/addons \
   && rm CustomComponents.zip \
-  && mv $DOCROOT/addons/CustomComponents-master $DOCROOT/addons/CustomComponents
+  && mv $DOCROOT/addons/Cockpit-CustomComponents-master $DOCROOT/addons/CustomComponents
 
 # UniqueSlugs addon
 echo "Downloading UniqueSlugs addon from https://github.com/raffaelj/cockpit_UniqueSlugs/archive/master.zip"
