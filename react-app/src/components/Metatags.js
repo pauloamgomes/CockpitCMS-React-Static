@@ -1,7 +1,7 @@
 import React from "react";
 import { Head, withSiteData } from "react-static";
 
-export default withSiteData(
+const Metatags = withSiteData(
   ({ title, siteName, description, pageDescription }) => (
     <Head>
       <title>{`${title} | ${siteName}`}</title>
@@ -16,3 +16,5 @@ export default withSiteData(
     </Head>
   )
 );
+
+export default Metatags;

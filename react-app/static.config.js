@@ -1,11 +1,10 @@
 import React from "react";
 //
 import { fetchCollection, fetchSingleton } from "./src/cockpit/fetch";
-import { COCKPIT_HOST } from "./src/cockpit/config";
 
 export default {
-  basePath: "",
-  siteRoot: COCKPIT_HOST,
+  basePath: "/CockpitCMS-React-Static",
+  siteRoot: "https://pauloamgomes.github.io",
   getSiteData: async () => {
     const settings = await fetchSingleton("Settings");
 
@@ -21,6 +20,12 @@ export default {
     const posts = await fetchCollection("post");
 
     const routes = [];
+
+    const menuItems = pages.map(page => ({
+      title: page.title,
+      slug: page._id === settings.homepage._id ? "" : page.slug,
+      menu: page.menu,
+    }));
 
     // Handle pages routes.
     pages.forEach(page => {
@@ -47,7 +52,7 @@ export default {
         lastModified: page._modified,
         getData: () => ({
           page,
-          pages,
+          menuItems,
           posts,
         }),
       });
@@ -62,7 +67,7 @@ export default {
             getData: () => ({
               page,
               subpage,
-              pages,
+              menuItems,
               posts,
             }),
           });
@@ -78,7 +83,7 @@ export default {
         lastModified: post._modified,
         getData: () => ({
           post,
-          pages,
+          menuItems,
           posts,
         }),
       });

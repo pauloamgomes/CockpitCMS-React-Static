@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 //
 import Metatags from "../components/Metatags";
-import CockpitComponents from "../components/CockpitComponents";
+import PageComponents from "../components/PageComponents";
 
-export default class Preview extends Component {
+export class Preview extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -33,7 +33,7 @@ export default class Preview extends Component {
     return (
       <article>
         <Metatags title={title} pageDescription={description} />
-        <CockpitComponents components={components} />
+        <PageComponents components={components} />
       </article>
     );
   }

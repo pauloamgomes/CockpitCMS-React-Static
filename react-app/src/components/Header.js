@@ -79,7 +79,7 @@ class Navigation extends React.Component {
   }
 
   render() {
-    const pages = this.props.pages || [];
+    const menuItems = this.props.menuItems || [];
     return (
       <NavbarStyled expand="md">
         <Container>
@@ -87,7 +87,7 @@ class Navigation extends React.Component {
           <NavbarToggler onClick={this.toggle}>menu</NavbarToggler>
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              {pages.map(
+              {menuItems.map(
                 (page, idx) =>
                   page.menu.includes("main") && (
                     <NavItem key={`menu-${idx}`}>

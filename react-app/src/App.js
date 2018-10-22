@@ -10,7 +10,10 @@ import Routes from "react-static-routes";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-import theme from "./theme";
+const theme = {
+  fontFamily: "Cabin, sans-serif",
+  primaryColor: "rgb(41, 48, 132)",
+};
 
 injectGlobal`
   body {

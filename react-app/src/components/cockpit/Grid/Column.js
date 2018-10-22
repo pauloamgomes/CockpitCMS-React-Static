@@ -2,7 +2,7 @@ import React from "react";
 import { Col } from "reactstrap";
 import styled from "styled-components";
 //
-import CockpitComponents from "../../CockpitComponents";
+import PageComponents from "../../PageComponents";
 
 const ColStyled = styled(Col)`
   h1 {
@@ -37,7 +37,7 @@ export default ({ children, cols }) => {
   }
   return (
     <ColStyled xs="12" sm={sm} md={md}>
-      <CockpitComponents components={children} />
+      <PageComponents components={children} />
     </ColStyled>
   );
 };

@@ -71,7 +71,7 @@ const Categories = styled.div`
   }
 `;
 
-export default ({ title, summary, categories, image }) => (
+const PostBanner = ({ title, summary, categories, image }) => (
   <ContainerStyled className="component--post-banner" fluid image={image}>
     <Head>
       <Container>
@@ -92,3 +92,5 @@ export default ({ title, summary, categories, image }) => (
     </Head>
   </ContainerStyled>
 );
+
+export default PostBanner;

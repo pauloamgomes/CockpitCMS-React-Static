@@ -2,8 +2,8 @@ import React from "react";
 import { withRouteData } from "react-static";
 
 import Metatags from "../components/Metatags";
-import CockpitComponents from "../components/CockpitComponents";
 import PostBanner from "../components/PostBanner";
+import PostComponents from "../components/PostComponents";
 
 export default withRouteData(({ post }) => (
   <article>
@@ -17,6 +17,6 @@ export default withRouteData(({ post }) => (
         []
       }
     />
-    <CockpitComponents components={post.components || []} />
+    <PostComponents components={post.components || []} />
   </article>
 ));

@@ -2,11 +2,13 @@ import React from "react";
 import { withRouteData } from "react-static";
 //
 import Metatags from "../components/Metatags";
-import CockpitComponents from "../components/CockpitComponents";
+import Components404 from "../components/404Components";
 
-export default withRouteData(({ page }) => (
+const Page404 = withRouteData(({ page }) => (
   <article>
     <Metatags title={page.title} pageDescription={page.description} />
-    <CockpitComponents components={page.components || []} />
+    <Components404 components={page.components || []} />
   </article>
 ));
+
+export default Page404;

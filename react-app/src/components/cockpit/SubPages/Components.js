@@ -1,6 +1,6 @@
 import React from "react";
 //
-import CockpitComponents from "../../CockpitComponents";
+import PageComponents from "../../PageComponents";
 
 export default ({ page, subpages }) => {
   let components = [];
@@ -9,5 +9,5 @@ export default ({ page, subpages }) => {
   } else {
     components = (subpages[0] && subpages[0].components) || [];
   }
-  return <CockpitComponents components={components} />;
+  return <PageComponents components={components} />;
 };
