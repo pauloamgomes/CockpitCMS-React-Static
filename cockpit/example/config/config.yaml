@@ -25,6 +25,13 @@ unique.slugs:
         post: title
         subpage: title
 
+# disabled layout components
+components.disabled:
+  image: true
+  section: true
+  html: true
+  gallery: true
+
 # define additional groups
 groups:
     # admin:
@@ -76,7 +83,7 @@ cors:
   # Specify allowed request methods, use ['*'] to allow all.
   allowedMethods: 'PUT, POST, GET, OPTIONS, DELETE'
   # Configure requests allowed from specific origins, use ['*'] to allow all.
-  allowedOrigins: '*'
+  allowedOrigins: 'http://site.com'
   # Sets the Access-Control-Max-Age header.
   maxAge: 500
   # Sets the Access-Control-Allow-Credentials header.
