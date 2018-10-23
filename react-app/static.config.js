@@ -1,10 +1,11 @@
 import React from "react";
 //
 import { fetchCollection, fetchSingleton } from "./src/cockpit/fetch";
+import * as Config from "./src/cockpit/config";
 
 export default {
-  basePath: "/CockpitCMS-React-Static",
-  siteRoot: "https://pauloamgomes.github.io",
+  basePath: Config.WEBSITE_BASE_PATH,
+  siteRoot: Config.WEBSITE_SITE_ROOT,
   getSiteData: async () => {
     const settings = await fetchSingleton("Settings");
 

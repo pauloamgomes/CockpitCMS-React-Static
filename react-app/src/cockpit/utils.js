@@ -5,7 +5,10 @@ export function getImageStyleUrl(style, image) {
     const img = image.styles.find(imgStyle => imgStyle.style === style);
     if (img && img.path) {
       if (Config.COCKPIT_LOCAL_IMAGES) {
-        img.path = img.path.replace(Config.COCKPIT_HOST, "");
+        img.path = img.path.replace(
+          Config.COCKPIT_HOST,
+          Config.WEBSITE_BASE_PATH
+        );
       }
       return img.path;
     }
@@ -16,7 +19,9 @@ export function getImageStyleUrl(style, image) {
     !image.path.startsWith(Config.COCKPIT_UPLOADS_DIR)
   ) {
     if (Config.COCKPIT_LOCAL_IMAGES) {
-      return `/${Config.COCKPIT_UPLOADS_DIR}${image.path}`;
+      return `${Config.WEBSITE_BASE_PATH}/${Config.COCKPIT_UPLOADS_DIR}${
+        image.path
+      }`;
     }
     return `${Config.COCKPIT_HOST}/${Config.COCKPIT_UPLOADS_DIR}${image.path}`;
   }
