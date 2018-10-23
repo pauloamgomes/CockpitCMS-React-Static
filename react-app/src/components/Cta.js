@@ -36,19 +36,19 @@ const ButtonLightStyled = styled(Button)`
   }
 
   a {
-    color: rgb(22, 76, 116);
+    color: rgb(41, 48, 97);
   }
 
   a:hover {
     text-decoration: none;
-    color: rgb(88, 83, 208);
+    color: rgb(22, 76, 116);
   }
 `;
 
-export default ({ text, url, type }) => {
-  const Tag = type === "dark" ? ButtonDarkStyled : ButtonLightStyled;
+export default ({ text, url, theme }) => {
+  const Tag = theme === "dark" ? ButtonDarkStyled : ButtonLightStyled;
   return (
-    <Tag outline type color="primary">
+    <Tag outline color="primary">
       <NavLink to={url}>{text}</NavLink>
     </Tag>
   );

@@ -13,3 +13,4 @@ export { default as CodeBlock } from "./CodeBlock";
 export { default as Form } from "./Form";
 export { default as Video } from "./Video";
 export { default as SubPages } from "./SubPages";
+export { default as Button } from "./Button";

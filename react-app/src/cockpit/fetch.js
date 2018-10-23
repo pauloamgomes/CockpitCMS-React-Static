@@ -1,6 +1,6 @@
 import axios from "axios";
 //
-import * as Config from "./config";
+import * as Config from "../config";
 
 export async function fetchCollection(collection) {
   return axios

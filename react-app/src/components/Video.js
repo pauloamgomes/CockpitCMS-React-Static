@@ -21,6 +21,14 @@ export default ({ url, playing }) => (
       playing={playing || false}
       width="100%"
       height="100%"
+      youtubeConfig={{
+        playerVars: {
+          showinfo: 0,
+          modestbranding: 1,
+          playsinline: 1,
+          loop: 1,
+        },
+      }}
     />
   </VideoWrapper>
 );

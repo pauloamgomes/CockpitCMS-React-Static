@@ -1,7 +1,7 @@
 import React from "react";
 //
 import { fetchCollection, fetchSingleton } from "./src/cockpit/fetch";
-import * as Config from "./src/cockpit/config";
+import * as Config from "./src/config";
 
 export default {
   basePath: Config.WEBSITE_BASE_PATH,

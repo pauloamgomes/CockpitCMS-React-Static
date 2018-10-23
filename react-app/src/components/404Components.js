@@ -1,11 +1,22 @@
 import React from "react";
+//
 import {
   Heading,
   Text,
   Divider,
   CustomImage,
+  BigHero,
   PageBanner,
+  SectionDivider,
+  LeafletMap,
   Grid,
+  BlogPosts,
+  PageBannerMedia,
+  CodeBlock,
+  Form,
+  Video,
+  SubPages,
+  Button,
 } from "./cockpit";
 
 const defaultComponents = {
@@ -13,12 +24,22 @@ const defaultComponents = {
   text: Text,
   divider: Divider,
   customimage: CustomImage,
+  bighero: BigHero,
   pagebanner: PageBanner,
+  sectiondivider: SectionDivider,
+  leafletmap: LeafletMap,
   grid: Grid,
+  blogposts: BlogPosts,
+  pagebannermedia: PageBannerMedia,
+  codeblock: CodeBlock,
+  form: Form,
+  video: Video,
+  subpages: SubPages,
+  button: Button,
 };
 
 export default ({ components }) => (
-  <div className="page--components">
+  <div className="page-404--components">
     {components &&
       components.map((component_parsed, idx) => {
         const name = component_parsed.component.toLowerCase();

@@ -20,6 +20,9 @@ const ColStyled = styled(Col)`
   img {
     width: auto;
   }
+  button {
+    width: 100%;
+  }
 `;
 
 export default ({ children, cols }) => {

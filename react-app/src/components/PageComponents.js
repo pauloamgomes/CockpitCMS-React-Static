@@ -1,4 +1,5 @@
 import React from "react";
+//
 import {
   Heading,
   Text,
@@ -15,6 +16,7 @@ import {
   Form,
   Video,
   SubPages,
+  Button,
 } from "./cockpit";
 
 const defaultComponents = {
@@ -33,6 +35,7 @@ const defaultComponents = {
   form: Form,
   video: Video,
   subpages: SubPages,
+  button: Button,
 };
 
 export default ({ components }) => (

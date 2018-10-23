@@ -51,7 +51,7 @@ export default ({ name, title, subtitle, linktext, linkurl }) => (
           {subtitle && <h2>{subtitle}</h2>}
         </Col>
         <Col sm="2">
-          <Cta text={linktext} url={linkurl} type="dark" />
+          <Cta text={linktext} url={linkurl} theme="dark" />
         </Col>
       </Row>
     </Container>
