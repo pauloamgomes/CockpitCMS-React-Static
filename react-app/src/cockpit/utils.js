@@ -6,7 +6,7 @@ export function getImageStyleUrl(style, image) {
     const img = image.styles.find(imgStyle => imgStyle.style === style);
 
     if (img && img.path) {
-      return `${Config.WEBSITE_BASE_PATH}/${img.path}`
+      return `/${Config.WEBSITE_BASE_PATH}/${img.path}`
         .replace("//", "/")
         .replace("//", "/");
     }
