@@ -9,3 +9,5 @@ react-app/public/storage/forms
 react-app/public/storage/imagestyles
 react-app/public/storage/singleton
 react-app/public/storage/tmp
+docs/storage/thumbs/.gitignore
+docs/storage/uploads/.gitignore
