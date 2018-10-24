@@ -5,7 +5,9 @@ app.name: Cockpit Example
 session.name: cockpit_local
 # base url
 base_url: http://localhost:8088
-site_url: http://localhost:8088
+site_url: /
+# use cockpit url for having resulting paths with domain (e.g. image styles)
+# site_url: http://localhost:8088
 base_route: /
 #thumbs.url: http://localhost:8088
 #assets.url: http://cockpit-example.docker.localhost/
