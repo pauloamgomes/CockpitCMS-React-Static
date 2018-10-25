@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Metatags from "../components/Metatags";
 import PageComponents from "../components/PageComponents";
 
-export class Preview extends Component {
+class Preview extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -38,3 +38,5 @@ export class Preview extends Component {
     );
   }
 }
+
+export default Preview;
