@@ -94,6 +94,9 @@ export default {
     routes.push({
       path: "/preview",
       component: "src/pages/Preview",
+      getData: () => ({
+        menuItems,
+      }),
     });
 
     return routes;
