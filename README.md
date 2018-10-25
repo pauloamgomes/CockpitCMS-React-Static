@@ -23,7 +23,7 @@ cd cockpit
 ./install.sh
 
 # start react app
-cd ../app
+cd ../react-app
 yarn install
 yarn start
 ```
