@@ -49,7 +49,7 @@ export default ({ text, url, theme }) => {
   const Tag = theme === "dark" ? ButtonDarkStyled : ButtonLightStyled;
   return (
     <Tag outline color="primary">
-      <NavLink to={url}>{text}</NavLink>
+      {url && <NavLink to={url}>{text}</NavLink>}
     </Tag>
   );
 };
