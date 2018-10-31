@@ -22,11 +22,11 @@ wget -qO- -O multiplecollectionlink.zip https://github.com/pauloamgomes/Cockpit-
   && mv $DOCROOT/addons/Cockpit-MultipleCollectionLink-1.1 $DOCROOT/addons/MultipleCollectionLink
 
 # image styles addon
-echo "Downloading ImageStyles addon from https://github.com/pauloamgomes/ImageStyles/archive/1.6.zip"
-wget -qO- -O ImageStyles.zip https://github.com/pauloamgomes/ImageStyles/archive/1.6.zip \
+echo "Downloading ImageStyles addon from https://github.com/pauloamgomes/ImageStyles/archive/1.7.zip"
+wget -qO- -O ImageStyles.zip https://github.com/pauloamgomes/ImageStyles/archive/1.7.zip \
   && unzip -q ImageStyles.zip -d $DOCROOT/addons \
   && rm ImageStyles.zip \
-  && mv $DOCROOT/addons/ImageStyles-1.6 $DOCROOT/addons/ImageStyles
+  && mv $DOCROOT/addons/ImageStyles-1.7 $DOCROOT/addons/ImageStyles
 
 # LayoutComponents addon
 echo "Downloading LayoutComponents addon from https://github.com/agentejo/LayoutComponents/archive/master.zip"
