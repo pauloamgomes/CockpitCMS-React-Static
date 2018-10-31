@@ -17,6 +17,8 @@ import {
   Video,
   SubPages,
   Button,
+  CustomCarousel,
+  Card,
 } from "./cockpit";
 
 const defaultComponents = {
@@ -36,6 +38,8 @@ const defaultComponents = {
   video: Video,
   subpages: SubPages,
   button: Button,
+  customcarousel: CustomCarousel,
+  card: Card,
 };
 
 export default ({ components }) => (

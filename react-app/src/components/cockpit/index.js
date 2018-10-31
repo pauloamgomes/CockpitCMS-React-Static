@@ -14,3 +14,5 @@ export { default as Form } from "./Form";
 export { default as Video } from "./Video";
 export { default as SubPages } from "./SubPages";
 export { default as Button } from "./Button";
+export { default as CustomCarousel } from "./CustomCarousel";
+export { default as Card } from "./Card";

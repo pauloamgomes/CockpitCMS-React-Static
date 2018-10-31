@@ -20,7 +20,7 @@ const NavbarStyled = styled(Navbar)`
   top: 0;
   left: 0;
   right: 0;
-  height: 50px;
+  height: auto;
   z-index: 9;
   margin-top: 1rem;
 

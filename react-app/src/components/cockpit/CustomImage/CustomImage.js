@@ -6,6 +6,7 @@ import { getImageStyleUrl } from "../../../cockpit/utils";
 
 const Image = styled.img`
   width: 100%;
+  padding-bottom: 1rem;
 `;
 
 export default ({ name, title, asset, style }) => (

@@ -22,12 +22,14 @@ export default withRouteData(({ name, title, page, match }) => (
         </Col>
         <Col sm="10">
           <Components
-            subpages={page.subpages}
+            subpages={(page && page.subpages) || []}
             page={
+              page &&
               page.subpages &&
-              page.subpages.filter(subpage => {
-                return match.url === `/${page.slug}/${subpage.slug}`;
-              })
+              page.slug &&
+              page.subpages.filter(
+                subpage => match.url === `/${page.slug}/${subpage.slug}`
+              )
             }
           />
         </Col>

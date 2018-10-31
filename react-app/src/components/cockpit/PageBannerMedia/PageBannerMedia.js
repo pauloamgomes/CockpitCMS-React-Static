@@ -11,7 +11,7 @@ const ContainerStyled = styled(Container)`
   max-height: ${props => (props.height === "large" ? 400 : 260)}px;
   background: url(${props =>
         getImageStyleUrl(
-          (props.summary && "PageBannerMedia") || "PageBanner",
+          props.height === "large" ? "PageBannerMedia" : "PageBanner",
           props.image
         )})
       50% 30% / cover no-repeat,
@@ -64,7 +64,7 @@ export default ({ name, title, summary, image, height }) => (
     className={`component--${name}`}
     fluid
     image={image}
-    height={height}
+    height={height || "large"}
   >
     <Head>
       <InnerContainer>

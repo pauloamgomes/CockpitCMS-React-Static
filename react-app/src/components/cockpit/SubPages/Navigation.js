@@ -32,9 +32,11 @@ const NavLinkStyled = styled(NavLink)`
 export default withRouteData(({ page, match }) => (
   <NavStyled
     vertical
-    className={match.url === `/${page.slug}` && "none-active"}
+    className={match.url === `/${(page && page.slug) || ""}` && "none-active"}
   >
-    {page.subpages &&
+    {page &&
+      page.slug &&
+      page.subpages &&
       page.subpages.map((subpage, idx) => (
         <NavItem key={`submenu-${idx}`}>
           <NavLinkStyled exact to={`/${page.slug}/${subpage.slug}`}>

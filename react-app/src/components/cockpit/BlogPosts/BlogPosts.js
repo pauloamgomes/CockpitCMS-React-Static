@@ -3,7 +3,7 @@ import { withRouteData } from "react-static";
 import { Container, Row, Col } from "reactstrap";
 import styled from "styled-components";
 //
-import Card from "../../Card";
+import BlogCard from "./BlogCard";
 import { getImageStyleUrl } from "../../../cockpit/utils";
 
 const ContainerStyled = styled(Container)`
@@ -31,7 +31,7 @@ export default withRouteData(({ posts, info, max, cols, name }) => {
         {posts &&
           posts.map((post, idx) => (
             <Col xs="12" md="6" lg={cols === 4 ? 3 : 4} key={`post-${idx}`}>
-              <Card
+              <BlogCard
                 image={getImageStyleUrl("Card", post.image)}
                 title={post.title}
                 text={post.summary}
