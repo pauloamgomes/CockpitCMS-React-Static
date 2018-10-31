@@ -1,0 +1,16 @@
+version: '3'
+services:
+  nginx-react-static-www:
+    image: 'wodby/nginx:1.15-5.0.11'
+    build: ./build/
+    container_name: nginx_react_static_www
+    environment:
+      NGINX_STATIC_OPEN_FILE_CACHE: 'off'
+      NGINX_ERROR_LOG_LEVEL: debug
+      NGINX_BACKEND_HOST: nginx-react-static
+      NGINX_SERVER_ROOT: /var/www/html
+      NGINX_CONF_INCLUDE: conf.d/react.conf
+    volumes:
+      - './html:/var/www/html:cached'
+    ports:
+      - '8081:8081'
