@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 //
 import Metatags from "../components/Metatags";
-import PageComponents from "../components/PageComponents";
+import PageComponents from "../components/PreviewComponents";
 
 class Preview extends Component {
   constructor(props) {

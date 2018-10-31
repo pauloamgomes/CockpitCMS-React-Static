@@ -2,11 +2,14 @@ import * as Config from "../config";
 
 export function getImageStyleUrl(style, image) {
   let path = "";
+
   if (image && image.styles !== undefined) {
     const img = image.styles.find(imgStyle => imgStyle.style === style);
 
     if (img && img.path) {
-      return `/${Config.WEBSITE_BASE_PATH}/${img.path}`
+      return `/${Config.WEBSITE_BASE_PATH}/${Config.COCKPIT_STORAGE_DIR}/${
+        img.path
+      }`
         .replace("//", "/")
         .replace("//", "/");
     }

@@ -1,10 +1,7 @@
-export const COCKPIT_HOST = "http://localhost:8088";
-export const COCKPIT_UPLOADS_DIR = "storage/uploads";
-export const COCKPIT_API_TOKEN = "74371aad38cc6a00cdba9a1f7792c9";
-export const COCKPIT_FORMS_API_TOKEN = "44112136dc6dd498a1ac39c097d8dc";
-// For local building
-export const WEBSITE_BASE_PATH = "";
-export const WEBSITE_SITE_ROOT = "http://localhost:3000";
-// # For prod building
-// export const WEBSITE_BASE_PATH = "CockpitCMS-React-Static";
-// export const WEBSITE_SITE_ROOT = "https://pauloamgomes.github.io";
+export const COCKPIT_HOST = process.env.COCKPIT_HOST;
+export const COCKPIT_STORAGE_DIR = process.env.COCKPIT_STORAGE_DIR;
+export const COCKPIT_UPLOADS_DIR = process.env.COCKPIT_UPLOADS_DIR;
+export const COCKPIT_API_TOKEN = process.env.COCKPIT_API_TOKEN;
+export const COCKPIT_FORMS_API_TOKEN = process.env.COCKPIT_FORMS_API_TOKEN;
+export const WEBSITE_BASE_PATH = process.env.WEBSITE_BASE_PATH;
+export const WEBSITE_SITE_ROOT = process.env.WEBSITE_SITE_ROOT;

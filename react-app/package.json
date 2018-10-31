@@ -4,12 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "react-static start",
+    "start": "sh -ac '. .env.local; react-static start'",
     "stage": "react-static build --staging",
-    "build": "react-static build",
+    "build.dev": "sh -ac '. .env.development; react-static build'",
+    "build.prod": "sh -ac '. .env.production; react-static build'",
     "bundle": "react-static bundle",
     "export": "react-static export",
-    "serve": "serve dist -p 3000"
+    "serve": "serve dist -p 3000",
+    "deploy.dev": "yarn build.dev && rm -rf ../public/html/* && cp -rf dist/* ../public/html/",
+    "deploy.prod": "yarn build.prod && rm -rf ../docs/* && cp -rf dist/* ../docs/"
   },
   "dependencies": {
     "axios": "^0.18.0",
