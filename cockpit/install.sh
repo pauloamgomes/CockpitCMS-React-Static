@@ -47,8 +47,7 @@ echo "Downloading UniqueSlugs addon from https://github.com/raffaelj/cockpit_Uni
 wget -qO- -O UniqueSlugs.zip https://github.com/raffaelj/cockpit_UniqueSlugs/archive/master.zip \
   && unzip -q UniqueSlugs.zip -d $DOCROOT/addons \
   && rm UniqueSlugs.zip \
-  && mv $DOCROOT/addons/cockpit_UniqueSlugs-master/UniqueSlugs $DOCROOT/addons/UniqueSlugs \
-  && rm -rf $DOCROOT/addons/cockpit_UniqueSlugs-master
+  && mv $DOCROOT/addons/cockpit_UniqueSlugs-master $DOCROOT/addons/UniqueSlugs
 
 # install example sqlite data
 echo
